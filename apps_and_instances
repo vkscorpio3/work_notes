@@ -1,0 +1,45 @@
+Instances
+-----------------------
+aux:
+-------------------
+
+
+
+csc:
+-------------------
+Customer service ticket side. where orders are kept, etc.
+
+merch:
+-------------------
+Where merchandise/store is updated
+
+
+preview:
+-------------------
+The preview of updates, not public facing
+
+
+Servers
+-----------------------
+
+
+tool
+-------------------
+
+
+app
+-------------------
+
+
+www
+-------------------
+
+
+search
+-------------------
+
+
+db
+-------------------
+
+

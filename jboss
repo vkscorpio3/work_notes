@@ -1,0 +1,21 @@
+Version 6 Notes
+----------------------
+Logs:
+    /var/log/jboss/*/instance/
+    Everything dumped into server.log, errors dumped into console.log
+
+Instances:
+    Locate instances by looking in subdirectories of each instance for a symlink
+    ls -l /opt/oracle/commerce/envs/*/jboss-conf.d/*/*.conf
+
+
+Version 5 Notes
+----------------------
+Logs: 
+    /opt/jboss/home/server/instance/log/
+    Everything dumped into console.log
+
+Instances:
+    Running instances located under jboss.conf.d
+    /opt/jboss/jboss-conf.d
+    
