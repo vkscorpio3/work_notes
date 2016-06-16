@@ -4,3 +4,57 @@ Java Instances
 Thread and heap dumps may be collected from apps that need to be restarted more than once,
 customers may request them.
 
+
+
+restart-env.sh -e <environment name>  This is a ?wrapper? around the stop-env.sh and start-env.sh.  It will bounce all the instances for a given environment and return to the command line.
+restart-env.sh -e prd1
+
+start-env.sh -e <environment name>  This will start all instances for a given environment
+start-env.sh -e prd1
+
+stop-env.sh -e <environment name>  This wills stop all instances for a given environment
+stop-env-sh -e prd1
+
+restart-inst.sh -e <environment name> -i <instance name>  This will stop then start a single instance in a specific environment
+restart-inst -e prd1 -i app1
+
+start-inst.sh -e <environment name> -i <instance name>  This will start a single instance in a specific environment
+start-inst.sh -e prd1 -i app1
+
+stop-inst.sh -e <environment name> -i <instance name>  This will stop a single instance in a specific environment
+stop-inst.sh -e prd1 -i app1
+
+restart-env.sh -e <environment name>  This is a ?wrapper? around the stop-env.sh and start-env.sh.  It will bounce all the instances for a given environment and return to the command line.
+restart-env.sh -e prd1
+
+start-env.sh -e <environment name>  This will start all instances for a given environment
+start-env.sh -e prd1
+
+stop-env.sh -e <environment name>  This wills stop all instances for a given environment
+stop-env-sh -e prd1
+
+restart-inst.sh -e <environment name> -i <instance name>  This will stop then start a single instance in a specific environment
+restart-inst -e prd1 -i app1
+
+start-inst.sh -e <environment name> -i <instance name>  This will start a single instance in a specific environment
+start-inst.sh -e prd1 -i app1
+
+stop-inst.sh -e <environment name> -i <instance name>  This will stop a single instance in a specific environment
+stop-inst.sh -e prd1 -i app1
+
+
+
+App Instance Control Scripts    
+----------------------
+JBoss 6
+----------------
+Locations:
+  /opt/oracle/commerce/common/bin/
+
+refresh-configs.sh
+    -a : update all envs on box
+    -e <env> : update a specific environment, able to pass several
+    -f : force updates, ignore svn conflicts
+    -h : prints help message
+    -n : include newrelic in update, bring it up to current version
+

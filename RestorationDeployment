@@ -1,0 +1,60 @@
+Restoration Hardware Plan
+------------------------------
+JBoss Version 6
+
+Steps
+------------------------------
+Turn off warnings @ Naemon & Pingdom
+
+1.Baby and Child
+------------------------------
+rhw-prd-dal-app-14-p:
+app1, aux2, concierge1
+
+rhw-prd-dal-app-15-p:
+app1, concierge1
+
+rhw-prd-dal-app-16-p:
+aux1, preview1
+
+rhw-prd-dal-tool-12-p:
+merch1
+
+
+2.Contemporary Art
+------------------------------
+rhw-prd-dal-app-14-p:
+app1
+
+rhw-prd-dal-app-15-p:
+app1
+
+rhw-prd-dal-app-16-p:
+preview1
+
+
+3.Restoration Hardware
+------------------------------
+rhw-prd-dal-app-11-p:
+app1, app2
+
+rhw-prd-dal-app-12-p:
+app1, app2
+
+rhw-prd-dal-app-13-p:
+app1, app2
+
+rhw-prd-dal-app-14-p:
+concierge1
+
+rhw-prd-dal-app-15-p:
+aux2, concierge1
+
+rhw-prd-dal-app-16-p:
+preview1
+
+rhw-prd-dal-tool-01-p:
+merch1, saprv1
+
+
+Enable Pingdom/Naemon
