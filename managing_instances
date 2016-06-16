@@ -1,0 +1,6 @@
+Java Instances
+---------------------
+
+Thread and heap dumps may be collected from apps that need to be restarted more than once,
+customers may request them.
+

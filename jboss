@@ -8,6 +8,9 @@ Instances:
     Locate instances by looking in subdirectories of each instance for a symlink
     ls -l /opt/oracle/commerce/envs/*/jboss-conf.d/*/*.conf
 
+Ear:
+    /opt/oracle/commerce/builds
+    
 
 Version 5 Notes
 ----------------------
@@ -18,4 +21,22 @@ Logs:
 Instances:
     Running instances located under jboss.conf.d
     /opt/jboss/jboss-conf.d
-    
+
+Ear: 
+    /opt/jboss/bamboo
+
+
+App Instance Control Scripts    
+----------------------
+JBoss 6
+----------------
+Locations:
+  /opt/oracle/commerce/common/bin/
+
+refresh-configs.sh
+    -a : update all envs on box
+    -e <env> : update a specific environment, able to pass several
+    -f : force updates, ignore svn conflicts
+    -h : prints help message
+    -n : include newrelic in update, bring it up to current version
+

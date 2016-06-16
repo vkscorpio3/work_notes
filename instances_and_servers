@@ -8,16 +8,16 @@ aux:
 csc:
 -------------------
 Customer service ticket side. where orders are kept, etc.
+Customer Service Agent(ATGAgent) 
 
 merch:
 -------------------
 Where merchandise/store is updated
-
+Content administration,BCC,Pub
 
 preview:
 -------------------
 The preview of updates, not public facing
-
 
 Servers
 -----------------------
