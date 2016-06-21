@@ -4,4 +4,4 @@ naemon: nag/disable/
 
 
 terms to learn:
-cdn, akamai
+cdn, akamai, ldap, haproxy

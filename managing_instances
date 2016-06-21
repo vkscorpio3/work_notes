@@ -1,55 +1,52 @@
 Java Instances
 ---------------------
-
-Thread and heap dumps may be collected from apps that need to be restarted more than once,
-customers may request them.
-
-
-
-restart-env.sh -e <environment name>  This is a ?wrapper? around the stop-env.sh and start-env.sh.  It will bounce all the instances for a given environment and return to the command line.
-restart-env.sh -e prd1
-
-start-env.sh -e <environment name>  This will start all instances for a given environment
-start-env.sh -e prd1
-
-stop-env.sh -e <environment name>  This wills stop all instances for a given environment
-stop-env-sh -e prd1
-
-restart-inst.sh -e <environment name> -i <instance name>  This will stop then start a single instance in a specific environment
-restart-inst -e prd1 -i app1
-
-start-inst.sh -e <environment name> -i <instance name>  This will start a single instance in a specific environment
-start-inst.sh -e prd1 -i app1
-
-stop-inst.sh -e <environment name> -i <instance name>  This will stop a single instance in a specific environment
-stop-inst.sh -e prd1 -i app1
-
-restart-env.sh -e <environment name>  This is a ?wrapper? around the stop-env.sh and start-env.sh.  It will bounce all the instances for a given environment and return to the command line.
-restart-env.sh -e prd1
-
-start-env.sh -e <environment name>  This will start all instances for a given environment
-start-env.sh -e prd1
-
-stop-env.sh -e <environment name>  This wills stop all instances for a given environment
-stop-env-sh -e prd1
-
-restart-inst.sh -e <environment name> -i <instance name>  This will stop then start a single instance in a specific environment
-restart-inst -e prd1 -i app1
-
-start-inst.sh -e <environment name> -i <instance name>  This will start a single instance in a specific environment
-start-inst.sh -e prd1 -i app1
-
-stop-inst.sh -e <environment name> -i <instance name>  This will stop a single instance in a specific environment
-stop-inst.sh -e prd1 -i app1
-
-
+Finding Instances
+---------------------
+JBoss6: /opt/oracle/commerce/envs/*/jboss-conf.d/*/*.conf
+JBoss5: /opt/jboss/jboss-conf.d
 
 App Instance Control Scripts    
 ----------------------
 JBoss 6
 ----------------
 Locations:
-  /opt/oracle/commerce/common/bin/
+/opt/oracle/commerce/common/bin/
+
+restart-env.sh -e <environment name>  This is a ?wrapper? around the stop-env.sh and start-env.sh.  It will bounce all the instances for a given environment and return to the command line.
+restart-env.sh -e prd1
+
+start-env.sh -e <environment name>  This will start all instances for a given environment
+start-env.sh -e prd1
+
+stop-env.sh -e <environment name>  This wills stop all instances for a given environment
+stop-env-sh -e prd1
+
+restart-inst.sh -e <environment name> -i <instance name>  This will stop then start a single instance in a specific environment
+restart-inst -e prd1 -i app1
+
+start-inst.sh -e <environment name> -i <instance name>  This will start a single instance in a specific environment
+start-inst.sh -e prd1 -i app1
+
+stop-inst.sh -e <environment name> -i <instance name>  This will stop a single instance in a specific environment
+stop-inst.sh -e prd1 -i app1
+
+restart-env.sh -e <environment name>  This is a ?wrapper? around the stop-env.sh and start-env.sh.  It will bounce all the instances for a given environment and return to the command line.
+restart-env.sh -e prd1
+
+start-env.sh -e <environment name>  This will start all instances for a given environment
+start-env.sh -e prd1
+
+stop-env.sh -e <environment name>  This wills stop all instances for a given environment
+stop-env-sh -e prd1
+
+restart-inst.sh -e <environment name> -i <instance name>  This will stop then start a single instance in a specific environment
+restart-inst -e prd1 -i app1
+
+start-inst.sh -e <environment name> -i <instance name>  This will start a single instance in a specific environment
+start-inst.sh -e prd1 -i app1
+
+stop-inst.sh -e <environment name> -i <instance name>  This will stop a single instance in a specific environment
+stop-inst.sh -e prd1 -i app1
 
 refresh-configs.sh
     -a : update all envs on box
@@ -58,3 +55,30 @@ refresh-configs.sh
     -h : prints help message
     -n : include newrelic in update, bring it up to current version
 
+
+JBoss 5
+---------------------
+restart-inst.sh <instance name>  This script is a ?wrapper? around the stop-inst.sh and start-inst.sh scripts.  It will bounce a given instance and return to the command line.
+restart-inst.sh app1
+
+stop-inst.sh -s <instance name>  This will stop a given instance.  It will wait for 10 minutes and if the instance is not stopped will issue a kill -9 on the pid. Think of the -s flag as ?stop"
+stop-inst.sh -s app1
+
+start-inst.sh <instance name>  This will start a given instance. Think of the -c flag as "continue"
+start-inst.sh -c app1
+
+You will see other variations across the environments:
+stop-all.sh  Stops all running instances (ones that have a proper jboss-conf symlink)
+start-all.sh
+restart-all.sh
+
+Be somewhat careful with the start-all or restart all since firing up 3-4 instances will put a decent load on the db as they load up caches etc.
+
+update-configs.sh   This will push the customers svn config layer.
+update-configs.sh
+
+
+Apps that Need Multiple Restarts
+---------------------
+Thread and heap dumps may be collected from apps that need to be restarted more than once,
+customers may request them.

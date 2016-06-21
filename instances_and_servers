@@ -1,45 +1,33 @@
-Instances
------------------------
-aux:
--------------------
-
-
-
+       tool-server
+-=-=-=-=-=-=-=-=-=-=-=-=-
 csc:
--------------------
+--------------
 Customer service ticket side. where orders are kept, etc.
 Customer Service Agent(ATGAgent) 
 
 merch:
--------------------
+---------------
 Where merchandise/store is updated
 Content administration,BCC,Pub
 
 preview:
--------------------
+---------------
 The preview of updates, not public facing
 
-Servers
------------------------
+
+       app-server
+-=-=-=-=-=-=-=-=-=-=-=-=-
+app:
+---------------
+The e-store applications
+
+aux:
+---------------
+order fulfilment, emails, physical, backend of app instances
 
 
-tool
--------------------
+        www-server
+-=-=-=-=-=-=-=-=-=-=-=-=-
+apache, haproxy, heartbeat
 
-
-app
--------------------
-
-
-www
--------------------
-
-
-search
--------------------
-
-
-db
--------------------
-
-
+haproxy is in front of apache server, on both www-01 or www-02 for redundancy, check each other with heartbeat. 

@@ -1,0 +1,15 @@
+Permissions:
+---------------------
+First digit: Owner, Second Digit: Group, Third Digit: World
+
+4: Read
+2: Write
+1: Execute
+
+Ex: 755
+
+First Digit(7): User can read write and execute
+
+Second Digit(5): Group can read(4) and execute(1)
+
+Third Digit(5): Everyone can read(4) and execute(1) 
