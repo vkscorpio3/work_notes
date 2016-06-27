@@ -1,10 +1,28 @@
 CentOS
-Haproxy
-CSF
-Puppet
+---------------------
+Proxy:
+https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts
+Haproxy - http://www.server-world.info/en/note?os=CentOS_7&p=haproxy 
+OR
+nginx - http://superuser.com/questions/610882/how-do-i-host-multiple-physical-web-servers-behind-a-single-ip-address
+
+Firewall:
+CSF - http://download.configserver.com/csf/install.txt
+Vyatta
+
+Automation:
+Puppet -  - http://download.configserver.com/csf/install.txt
+
+Version Control:
 SVN
-Apache
+
+HTTP:
+Apache - http://dev.antoinesolutions.com/apache-server
+
+Database:
 MySQL
+
+SSH Automation:
 Ansible
 
 Maybe:

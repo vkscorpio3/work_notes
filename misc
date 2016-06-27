@@ -1,7 +1,54 @@
 Changes from merch and bcc push to preview before going to apps
 
+bcc on merch app of tool server
+
 naemon: nag/disable/
 
 
 terms to learn:
 cdn, akamai, ldap, haproxy
+
+
+Schemas
+---------------------
+core tables:
+store
+    pricing, encrypted CC
+
+agent:
+csc
+
+pub:
+merch(bcc is the interface)
+    
+
+cata:
+catalog
+
+catb:
+catalog
+
+CATA and CATB - Apps pull from one only while the other is updated, then they switch
+
+NAG Notes
+---------------------
+SVGs are searchable, for finding locations of firewalls, instances, layout, etc.
+
+To find an instance
+---------------------
+    - nag/naemon/
+    - Searchboxes: 
+        search  |   ~   |   <instance>
+        search  |   ~   |   <client>
+
+
+Find ports of running process 
+---------------------
+find PID
+    ps -ef | grep <instance>
+    netstat -peanut | grep <PID> | grep LISTEN
+
+
+Find and replace string in many files
+---------------------
+sed -i '' 's/73.14.161.174/24.9.57.3/g' the-files*

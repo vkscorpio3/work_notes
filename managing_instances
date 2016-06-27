@@ -16,6 +16,7 @@ restart-env.sh -e <environment name>  This is a ?wrapper? around the stop-env.sh
 restart-env.sh -e prd1
 
 start-env.sh -e <environment name>  This will start all instances for a given environment
+m notes/misc
 start-env.sh -e prd1
 
 stop-env.sh -e <environment name>  This wills stop all instances for a given environment
