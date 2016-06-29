@@ -51,4 +51,21 @@ find PID
 
 Find and replace string in many files
 ---------------------
-sed -i '' 's/73.14.161.174/24.9.57.3/g' the-files*
+sed -i '' 's/<find this>/<replace with>/g' the-files*
+
+
+Cron
+---------------------
+crontabs: /var/spool/ holds crontabs, files should be same as user: crontab -l
+
+
+sed 's/tcp|in|d=.*|s=2.16.217.0\/24/#test123/g' csf.allow-vmx* | less
+
+
+things to add to confluence:
+---------------------
+bring shell into ssh(rc)A
+find and replace all with sed?
+finding ports of jboss appsA
+find and replace all with sed?
+finding ports of jboss apps
